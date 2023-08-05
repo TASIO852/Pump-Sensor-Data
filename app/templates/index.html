@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Chamada de API</h1>
+    <div id="get-message"></div>
+    <div id="post-message"></div>
+    <button id="load-data">Carregar Dados (GET)</button>
+    <button id="post-data-btn">Enviar Dados (POST)</button>
+    <h2>Resultados do GET</h2>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Sensor</th>
+                <th>Medição</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        function addRow(date, time, sensor, measurement, status) {
+            $("#data-table tbody").append(`
+                <tr>
+                    <td>${date}</td>
+                    <td>${time}</td>
+                    <td>${sensor}</td>
+                    <td>${measurement}</td>
+                    <td>${status}</td>
+                </tr>
+            `);
+        }
+
+        function loadGetResults() {
+            $.get("/get_data", function(response) {
+                $("#data-table tbody").empty();
+                response.data.forEach(function(row) {
+                    const timestamp = new Date(row['timestamp']);
+                    const date = timestamp.toISOString().split('T')[0];
+                    const time = timestamp.toTimeString().split(' ')[0];
+                    const status = row['machine_status'];
+                    addRow(date, time, "Sensor 07", row['sensor_07'], status);
+                    addRow(date, time, "Sensor 47", row['sensor_47'], status);
+                });
+                $("#get-message").text(response.message);
+            });
+        }
+
+        $("#load-data").click(loadGetResults);
+
+        $("#post-data-btn").click(function() {
+            const postData = [
+                {
+                    timestamp: "2023-08-04T14:44:07",
+                    sensor_07: 25,
+                    sensor_47: 25,
+                    machine_status: "OK"
+                }
+            ];
+
+            $.ajax({
+                url: "/post_data",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(postData),
+                success: function(response) {
+                    $("#post-message").text(response.message);
+                    loadGetResults(); // Atualiza a tabela após POST
+                }
+            });            
+        });
+    </script>
+</body>
+</html>
