@@ -22,7 +22,7 @@
 
 - **Processamento:** Organizar os dados em um Pandas DataFrame com colunas específicas (Data, Hora, Sensor, Medição, Status), e exibi-lo no console (A rota esta na no arquivo `routes.py`).
 
-## 3. **Interface de Usuário Avançada (Destaque ╰(*°▽°*)╯)**
+## 3. **Interface de Usuário Avançada ╰(*°▽°*)╯**
 
 ### a. **Interface da Chamada de API**
 
@@ -74,5 +74,3 @@ Pump Sensor Data
 ## Conclusão
 
 Esta documentação abrange tanto o desafio técnico quanto componentes adicionais desenvolvidos para se destacar. O foco principal permanece no desenvolvimento das APIs para consulta e carregamento de dados, mas também inclui uma interface de usuário avançada com HTML, JavaScript/jQuery, e CSS. Esses extras demonstram uma abordagem mais complexa e completa, oferecendo funcionalidades adicionais que vão além do desafio proposto.
-
-Dessa forma, a documentação reflete tanto os requisitos do desafio quanto os componentes adicionais que você adicionou para se destacar, integrando tudo de maneira coesa e clara.
