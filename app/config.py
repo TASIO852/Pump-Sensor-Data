@@ -1,6 +1,6 @@
 import os
 
-DATA_BASE = "C:/Users/tarsi/OneDrive/Documentos/Projects/Data Science/Pump Sensor Data/data/pump_sensor_data.csv"
-DATA_DIR = 'C:/Users/tarsi/OneDrive/Documentos/Projects/Data Science/Pump Sensor Data/data/'
+DATA_BASE = "Caminho do arquivo baixado no Kaggle"
+DATA_DIR = 'Caminho da pasta Data'
 GET_DATA_PATH = os.path.join(DATA_DIR, 'get_data.csv')
 POST_DATA_PATH = os.path.join(DATA_DIR, 'post_data.csv')

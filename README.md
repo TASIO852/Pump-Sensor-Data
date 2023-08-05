@@ -16,7 +16,7 @@
 ### a. **Recepção de Dados**
 
 - **Arquivo:** `data_handler.py`
-- **Funções:** Para enviar os dados via POST para o diretorio data simulando um BD
+- **Funções:** Para enviar os dados via POST para o diretorio DATA simulando um BD que passam por um `validador.py` e depois são organizadas e apos e criado um arquivo CSV com os dados
 
 ### b. **Organização de Dados**
 
@@ -67,6 +67,7 @@ Pump Sensor Data
 
 ## 5. **Instruções de Instalação e execução**
 
+- **Pre-config:** No arquivo `config.py` coloque os caminhos que tem seu computador para que o codigo funcione
 - **Dependências:** Lista de todas as bibliotecas necessárias no arquivo `requirements.txt`, para instalação via PIP.
 - **Execução:** Depois de tudo instalado executo o arquivo `main.py` e no seu browser entre no`"http://localhost:5000` e divirta-se (❁´◡`❁).
 
