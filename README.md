@@ -1,43 +1,43 @@
-# Documentação Completa do Desafio Técnico
+# Complete Technical Challenge Documentation
 
-## 1. **Serviço de Solicitação de Dados (API GET)**
+## 1. **Data Request Service (GET API)**
 
-### a. **Leitura e Filtragem de Dados**
+### The. **Data Reading and Filtering**
 
-- **Arquivo:** `data_handler.py`
-- **Funções:** Para ler o arquivo, filtrar dados de acordo com os critérios do desafio (abril de 2018, sensores 07 e 47, valores entre 20 e 30), e preparar a resposta.
+- **File:** `data_handler.py`
+- **Functions:** To read the file, filter data according to the challenge criteria (April 2018, sensors 07 and 47, values between 20 and 30), and prepare the answer.
 
-### b. **API GET**
+### B. **GET API**
 
-- **Metodologia:** Responder com os dados filtrados em formato JSON via GET request e exibe na interface (A rota esta na no arquivo `routes.py`).
+- **Methodology:** Respond with the filtered data in JSON format via GET request and display it in the interface (The route is in the `routes.py` file).
 
-## 2. **Serviço de Recepção de Dados (API POST)**
+## 2. **Data Reception Service (POST API)**
 
-### a. **Recepção de Dados**
+### The. **Data Reception**
 
-- **Arquivo:** `data_handler.py`
-- **Funções:** Para enviar os dados via POST para o diretorio DATA simulando um BD que passam por um `validador.py` e depois são organizadas e apos e criado um arquivo CSV com os dados
+- **File:** `data_handler.py`
+- **Functions:** To send the data via POST to the DATA directory simulating a DB that pass through a `validador.py` and then are organized and after that a CSV file is created with the data
 
-### b. **Organização de Dados**
+### B. **Data Organization**
 
-- **Processamento:** Organizar os dados em um Pandas DataFrame com colunas específicas (Data, Hora, Sensor, Medição, Status), e exibi-lo no console (A rota esta na no arquivo `routes.py`).
+- **Processing:** Organize the data in a Pandas DataFrame with specific columns (Date, Time, Sensor, Measurement, Status), and display it in the console (The route is in the `routes.py` file).
 
-## 3. **Interface de Usuário Avançada ╰(*°▽°*)╯**
+## 3. **Advanced User Interface ╰(*°▽°*)╯**
 
-### a. **Interface da Chamada de API**
+### The. **API Call Interface**
 
-- Estrutura HTML com cabeçalho, corpo, botões, e tabela de resultados.
-- JavaScript/jQuery com funções e manipuladores de eventos de front-end.
-- Estilização com CSS.
+- HTML structure with header, body, buttons, and results table.
+- JavaScript/jQuery with front-end functions and event handlers.
+- Styling with CSS.
 
-### b. **HTML Resultados**
+### B. **HTML Results**
 
-- Painel de controle com botões POST,GET e tabela para apresentar os dados do GET.
-- Estilização com arquivo CSS separado.
+- Control panel with POST, GET buttons and table to present GET data.
+- Styling with separate CSS file.
 
-## 4. **Estrutura de Pastas**
+## 4. **Folder Structure**
 
-- **Organização:** Arquivos organizados de forma clara, facilitando a execução e manutenção como na estrutura de pastas abaixo.
+- **Organization:** Files are clearly organized, making execution and maintenance easier, as shown in the folder structure below.
 
 ```
 Pump Sensor Data
@@ -65,12 +65,12 @@ Pump Sensor Data
  
 ```
 
-## 5. **Instruções de Instalação e execução**
+## 5. **Installation and running instructions**
 
-- **Pre-config:** No arquivo `config.py` coloque os caminhos que tem seu computador para que o codigo funcione
-- **Dependências:** Lista de todas as bibliotecas necessárias no arquivo `requirements.txt`, para instalação via PIP.
-- **Execução:** Depois de tudo instalado executo o arquivo `main.py` e no seu browser entre no`"http://localhost:5000` e divirta-se (❁´◡`❁).
+- **Pre-config:** In the `config.py` file, put the paths your computer has for the code to work
+- **Dependencies:** List of all necessary libraries in the `requirements.txt` file, for installation via PIP.
+- **Execution:** After everything is installed, run the `main.py` file and in your browser go to `"http://localhost:5000` and have fun (❁´◡`❁).
 
-## Conclusão
+## Conclusion
 
-Esta documentação abrange tanto o desafio técnico quanto componentes adicionais desenvolvidos para se destacar. O foco principal permanece no desenvolvimento das APIs para consulta e carregamento de dados, mas também inclui uma interface de usuário avançada com HTML, JavaScript/jQuery, e CSS. Esses extras demonstram uma abordagem mais complexa e completa, oferecendo funcionalidades adicionais que vão além do desafio proposto.
+This documentation covers both the technical challenge and additional components designed to stand out. The main focus remains on developing the APIs for querying and loading data, but also includes an advanced user interface with HTML, JavaScript/jQuery, and CSS. These extras demonstrate a more complex and complete approach, offering additional functionality that goes beyond the proposed challenge.

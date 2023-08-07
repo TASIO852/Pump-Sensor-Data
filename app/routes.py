@@ -29,7 +29,7 @@ def get_data():
     filtered_data.to_csv(app.config['GET_DATA_PATH'], index=False)
 
     # Returning the filtered data as a JSON response to the client
-    return jsonify(message='Dados carregados na pagina com sucesso', data=filtered_data.to_dict(orient='records'))
+    return jsonify(message='Data loaded on the page successfully', data=filtered_data.to_dict(orient='records'))
 
 # Defining another API endpoint '/post_data' to be accessed via POST requests.
 # This endpoint accepts the filtered dataset, restructures it, and then saves the results.
@@ -53,7 +53,7 @@ def post_data():
         organized_data.to_csv(app.config['POST_DATA_PATH'], index=False)
 
         # Returning a success message and the organized data as a JSON response to the client
-        return jsonify(message='Dados organizados no banco com sucesso (Um arquivo foi criado no diretório data do projeto)', data=organized_data.to_dict(orient='records'))
+        return jsonify(message='Data successfully organized in the database (A file was created in the project data directory)', data=organized_data.to_dict(orient='records'))
 
     # Handling exceptions that might occur during data organization and saving
     except Exception as e:
